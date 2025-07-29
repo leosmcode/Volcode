@@ -29,11 +29,10 @@
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <div class="nav-spacer"></div>
             <div class="burger" id="burger-menu" aria-label="Menu mobile" role="button" tabindex="0" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </nav>
     </header>
@@ -50,32 +49,62 @@
             </div>
         </section>
 
-        <section id="sobre" class="about">
+        <section id="sobre" class="about section-asymmetric">
             <div class="container">
-                <div class="about-content">
-                    <div class="about-logo">
-                        <img src="logo.png" alt="Volcode Logo" class="company-logo">
-                    </div>
-                    <div class="about-text">
-                        <h2>🚀 <span class="volcode-title font-megrim">Volcode</span> <span class="solutions-title">| Soluções em TI</span></h2>
-                        <div class="company-info">
-                            <p>🔹 Suporte e inovação para seu negócio</p>
-                            <p>🔹 Tecnologia descomplicada e eficiente</p>
-                            <p>🔹 Consultoria • Suporte • Desenvolvimento</p>
+                <div class="section-content layout-left-image">
+                    <div class="content-image" data-animation="slide-in-left">
+                        <div class="image-wrapper">
+                            <img src="logo.png" alt="Volcode Logo" class="company-logo">
+                            <div class="image-decoration"></div>
                         </div>
-                        <div class="company-description">
+                    </div>
+                    <div class="content-text" data-animation="slide-in-right">
+                        <h2 data-animation="fade-in"><span class="volcode-title font-megrim">Volcode</span> <span class="solutions-title">| Soluções em TI</span></h2>
+                        <div class="company-info" data-animation="fade-in">
+                            <div class="info-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>Suporte e inovação para seu negócio</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-cogs"></i>
+                                <span>Tecnologia descomplicada e eficiente</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Consultoria • Suporte • Desenvolvimento</span>
+                            </div>
+                        </div>
+                        <div class="company-description" data-animation="fade-in">
                             <p>Na Volcode, transformamos desafios tecnológicos em soluções inovadoras. Nossa equipe especializada oferece suporte completo em TI, desde consultoria estratégica até desenvolvimento de sistemas personalizados.</p>
                             <p>Acreditamos que a tecnologia deve ser um facilitador para o crescimento do seu negócio. Por isso, oferecemos soluções descomplicadas e eficientes que se adaptam às suas necessidades.</p>
+                        </div>
+                        <div class="stats-grid" data-animation="zoom-in">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projetos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Anos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Satisfação</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="tecnologias" class="technologies">
+        <section id="tecnologias" class="technologies section-asymmetric">
             <div class="container">
-                <h2>Tecnologias que Utilizamos</h2>
-                <div class="tech-carousel-container">
+                <div class="section-header-tech" data-animation="fade-in">
+                    <h2>Tecnologias que Impulsionam o Seu Sucesso</h2>
+                    <p class="section-description">Na Volcode, não apenas utilizamos tecnologias; nós as dominamos para construir o futuro do seu negócio. Nossa abordagem é fundamentada na seleção estratégica das ferramentas mais avançadas e robustas do mercado.</p>
+                </div>
+
+                <div class="tech-carousel-full-width" data-animation="zoom-in">
                     <div class="tech-carousel">
                         <div class="tech-card"><i class="fab fa-html5"></i><h3>HTML5</h3><p>Estrutura Web Moderna</p></div>
                         <div class="tech-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3><p>Design Responsivo</p></div>
@@ -85,96 +114,186 @@
                         <div class="tech-card"><i class="fab fa-python"></i><h3>Python</h3><p>Automação e IA</p></div>
                         <div class="tech-card"><i class="fas fa-database"></i><h3>Bancos de Dados</h3><p>SQL & NoSQL</p></div>
                         <div class="tech-card"><i class="fab fa-aws"></i><h3>Cloud Computing</h3><p>AWS, Azure, GCP</p></div>
+                        <div class="tech-card"><i class="fab fa-docker"></i><h3>Docker</h3><p>Containerização</p></div>
+                        <div class="tech-card"><i class="fas fa-robot"></i><h3>Machine Learning</h3><p>Inteligência Artificial</p></div>
+                        <div class="tech-card"><i class="fab fa-html5"></i><h3>HTML5</h3><p>Estrutura Web Moderna</p></div>
+                        <div class="tech-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3><p>Design Responsivo</p></div>
+                        <div class="tech-card"><i class="fab fa-js-square"></i><h3>JavaScript</h3><p>Interatividade Avançada</p></div>
+                        <div class="tech-card"><i class="fab fa-react"></i><h3>React</h3><p>Aplicações Dinâmicas</p></div>
+                        <div class="tech-card"><i class="fab fa-node-js"></i><h3>Node.js</h3><p>Backend Escalável</p></div>
+                        <div class="tech-card"><i class="fab fa-python"></i><h3>Python</h3><p>Automação e IA</p></div>
+                        <div class="tech-card"><i class="fas fa-database"></i><h3>Bancos de Dados</h3><p>SQL & NoSQL</p></div>
+                        <div class="tech-card"><i class="fab fa-aws"></i><h3>Cloud Computing</h3><p>AWS, Azure, GCP</p></div>
+                        <div class="tech-card"><i class="fab fa-docker"></i><h3>Docker</h3><p>Containerização</p></div>
+                        <div class="tech-card"><i class="fas fa-robot"></i><h3>Machine Learning</h3><p>Inteligência Artificial</p></div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="clientes" class="clients">
+        <section id="clientes" class="clients section-asymmetric">
             <div class="container">
-                <h2>Depoimentos de Clientes</h2>
-                <p class="clients-description">O que nossos clientes dizem sobre a <span class="volcode-inline font-megrim">Volcode</span></p>
-                <div class="carousel slide" id="carousel-example-generic">
-                    <ol class="carousel-indicators"></ol>
-                    <div class="carousel-inner" role="listbox">
-                        <figure class="item">
-                            <figcaption class="carousel-caption">
-                                <img alt="Logo Cliente 1" class="img-responsive" src="images/clientes/logo_freitas.png">
-                                <p class="depoiment-onn">"Trabalhamos com a Volcode há muitos anos e hoje a empresa é o principal parceiro da nossa Área de TI. Com profissionais altamente qualificados, sempre nos atendeu com excelência."</p>
-                                <p><strong>Rogério Costa</strong>, Freitas Comex</p>
-                            </figcaption>
-                        </figure>
-                        <figure class="item">
-                            <figcaption class="carousel-caption">
-                                <img alt="Logo Cliente 2" class="img-responsive" src="images/clientes/logo_gtf.png">
-                                <p class="depoiment-onn">"A equipe da Volcode sempre demonstrou um grande profissionalismo, oferecendo soluções sob medida que realmente atendem às nossas expectativas. A agilidade e a eficiência são diferenciais."</p>
-                                <p><strong>Thiago Hobus de Freitas</strong>, GTF Ferramentaria</p>
-                            </figcaption>
-                        </figure>
+                <div class="section-content layout-left-text">
+                    <div class="content-text" data-animation="slide-in-left">
+                        <h2>Depoimentos de Clientes</h2>
+                        <p class="section-description">O que nossos clientes dizem sobre a <span class="volcode-inline font-megrim">Volcode</span></p>
+                        <div class="client-benefits">
+                            <div class="benefit-item"><i class="fas fa-star"></i><span>Excelência em atendimento</span></div>
+                            <div class="benefit-item"><i class="fas fa-clock"></i><span>Agilidade na entrega</span></div>
+                            <div class="benefit-item"><i class="fas fa-shield-alt"></i><span>Soluções confiáveis</span></div>
+                            <div class="benefit-item"><i class="fas fa-users"></i><span>Equipe especializada</span></div>
+                        </div>
                     </div>
-                    <a class="left carousel-control" role="button"><svg viewBox="0 0 50 80"><polyline fill="none" stroke="#FFFFFF" stroke-width="2" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></a>
-                    <a class="right carousel-control" role="button"><svg viewBox="0 0 50 80"><polyline fill="none" stroke="#FFFFFF" stroke-width="2" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></a>
+                    <div class="content-visual" data-animation="slide-in-right">
+                        <div class="carousel slide" id="carousel-example-generic">
+                            <div class="carousel-inner" role="listbox">
+                                <figure class="item">
+                                    <figcaption class="carousel-caption">
+                                        <img alt="Logo Cliente 1" class="img-responsive" src="images/clientes/logo_freitas.png">
+                                        <p class="depoiment-onn">"Trabalhamos com a Volcode há muitos anos e hoje a empresa é o principal parceiro da nossa Área de TI. Com profissionais altamente qualificados, sempre nos atendeu com excelência."</p>
+                                        <p><strong>Rogério Costa</strong>, Freitas Comex</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="item">
+                                    <figcaption class="carousel-caption">
+                                        <img alt="Logo Cliente 2" class="img-responsive" src="images/clientes/logo_gtf.png">
+                                        <p class="depoiment-onn">"A equipe da Volcode sempre demonstrou um grande profissionalismo, oferecendo soluções sob medida que realmente atendem às nossas expectativas. A agilidade e a eficiência são diferenciais."</p>
+                                        <p><strong>Thiago Hobus de Freitas</strong>, GTF Ferramentaria</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                             <ol class="carousel-indicators"></ol>
+                            <a class="left carousel-control" role="button"><svg viewBox="0 0 50 80"><polyline fill="none" stroke="#FFFFFF" stroke-width="2" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></a>
+                            <a class="right carousel-control" role="button"><svg viewBox="0 0 50 80"><polyline fill="none" stroke="#FFFFFF" stroke-width="2" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projetos" class="projects">
+        <section id="projetos" class="projects section-asymmetric">
             <div class="container">
-                <h2>Nossos Projetos</h2>
-                <p class="projects-description">Conheça alguns dos projetos que desenvolvemos com excelência</p>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image"><i class="fas fa-shopping-cart"></i></div>
+                <div class="section-header" data-animation="fade-in">
+                    <h2>Nossos Projetos</h2>
+                    <p class="section-description">Conheça alguns dos projetos que desenvolvemos com excelência</p>
+                </div>
+                <div class="projects-asymmetric-grid" data-animation="zoom-in">
+                    <div class="project-card featured">
+                        <div class="project-image">
+                            <img src="allan.png" alt="Plataforma de E-commerce">
+                        </div>
                         <div class="project-content">
                             <h3>Plataforma de E-commerce</h3>
                             <p>Solução de vendas online com múltiplos vendedores, pagamentos integrados e painel administrativo avançado.</p>
-                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span></div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <a href="#" class="project-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-image">
+                            <img src="images/projeto-dashboard.jpg" alt="Dashboard de Analytics">
+                        </div>
                         <div class="project-content">
                             <h3>Dashboard Analytics</h3>
-                            <p>Sistema de análise de dados em tempo real com visualizações interativas e relatórios para tomada de decisões.</p>
-                            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">React</span><span class="tech-tag">PostgreSQL</span></div>
+                            <p>Sistema de análise de dados em tempo real com visualizações interativas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                             <a href="#" class="project-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="project-image">
+                           <img src="images/projeto-app-mobile.jpg" alt="Aplicativo Mobile">
+                        </div>
                         <div class="project-content">
                             <h3>Aplicativo Mobile</h3>
-                            <p>App com geolocalização, pagamentos online e sistema de avaliações para o setor de serviços.</p>
-                            <div class="project-tech"><span class="tech-tag">React Native</span><span class="tech-tag">Firebase</span><span class="tech-tag">Stripe</span></div>
+                            <p>App com geolocalização, pagamentos online e sistema de avaliações.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                             <a href="#" class="project-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="contato" class="contact-modern">
+        <section id="contato" class="contact-modern section-asymmetric">
             <div class="container">
-                <div class="contact-modern-container">
-                    <div class="contact-modern-info">
+                <div class="section-content layout-contact">
+                    <div class="content-info" data-animation="slide-in-left">
                         <h2>Entre em Contato</h2>
-                        <p class="contact-modern-description">Pronto para transformar sua empresa? Fale conosco e descubra como a tecnologia pode impulsionar seu negócio.</p>
+                        <p class="section-description">Pronto para transformar sua empresa? Fale conosco e descubra como a tecnologia pode impulsionar seu negócio.</p>
+                        
                         <div class="contact-info-grid">
-                            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Localização</h4><p>Itajaí - SC, Brasil</p></div></div>
-                            <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>E-mail</h4><p><a href="mailto:contato@volcode.com.br">contato@volcode.com.br</a></p></div></div>
-                            <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Telefone</h4><p><a href="tel:+5547997190249">(47) 99719-0249</a></p></div></div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-details"><h4>Localização</h4><p>Itajaí - SC, Brasil</p></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-details"><h4>Telefone</h4><p><a href="tel:+5547997190249">(47) 99719-0249</a></p></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-details"><h4>E-mail</h4><p>contato@volcode.com.br</p></div>
+                            </div>
                         </div>
-                        <div class="contact-modern-social">
-                            <a href="#" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        
+                        <div class="contact-social">
+                            <h4>Siga-nos nas Redes Sociais</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <form class="contact-modern-form" id="contact-form-modern" action="https://formspree.io/f/xjkryqde" method="POST">
-                        <input type="text" name="name" placeholder="Nome Completo" required aria-label="Seu nome">
-                        <input type="email" name="email" placeholder="Seu Melhor E-mail" required aria-label="Seu e-mail">
-                        <input type="text" name="subject" placeholder="Assunto" required aria-label="Assunto da mensagem">
-                        <textarea name="message" placeholder="Sua Mensagem" rows="4" required aria-label="Sua mensagem"></textarea>
-                        <button type="submit" class="btn primary"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
-                    </form>
+                    <div class="content-form" data-animation="slide-in-right">
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Nome Completo</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" required placeholder=" ">
+                                <label for="phone">Telefone</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Selecione um serviço</option>
+                                    <option value="consultoria">Consultoria em TI</option>
+                                    <option value="desenvolvimento">Desenvolvimento Web</option>
+                                    <option value="mobile">Aplicativos Mobile</option>
+                                    <option value="cloud">Cloud Computing</option>
+                                    <option value="suporte">Suporte Técnico</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                                <label for="service">Serviço de Interesse</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                                <label for="message">Mensagem</label>
+                            </div>
+                            <button type="submit" class="btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -182,29 +301,40 @@
 
     <footer>
         <div class="container">
-            <div class="footer-contact">
-                <p><i class="fas fa-envelope"></i> contato@volcode.com.br</p>
-                <p><i class="fas fa-phone"></i> (47) 99719-0249</p>
-                <p><i class="fas fa-map-marker-alt"></i> Itajaí - SC</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="font-megrim">Volcode</h3>
+                    <p>Transformando desafios tecnológicos em soluções inovadoras para o seu negócio.</p>
+                    <p>Suporte e inovação com tecnologia descomplicada e eficiente.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Itajaí - SC, Brasil</li>
+                        <li><i class="fas fa-phone"></i> (47) 99719-0249</li>
+                        <li><i class="fas fa-envelope"></i> contato@volcode.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg - Sex: 8h às 18h</li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Volcode. Todos os direitos reservados.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Volcode. Todos os direitos reservados.</p>
+                    <p>
+                        Criado e desenvolvido por 
+                        <a href="https://www.instagram.com/leosmrosa/" target="_blank" class="footer-link">leosmrosa</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5547997190249" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <div id="thankyou-modal-modern" class="modal" role="dialog" aria-labelledby="modal-title">
-        <div class="modal-content">
-            <span class="close-modal" aria-label="Fechar modal">&times;</span>
-            <h3 id="modal-title">Obrigado!</h3>
-            <p>Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.</p>
-        </div>
-    </div>
-
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
