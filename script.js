@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingTextElement = document.getElementById('typing-text');
     if (typingTextElement) {
         const words = [
-            "Soluções em TI.",
+            "Inteligência em TI.",
             "Desenvolvimento Web moderno.",
             "Suporte Técnico.",
         ];
