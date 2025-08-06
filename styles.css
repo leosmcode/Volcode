@@ -912,7 +912,7 @@ section h2 {
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background: var(--white);
+    background: #004bad;
     border: 1px solid var(--border-color);
     border-radius: 50%;
     display: flex;
@@ -1377,3 +1377,31 @@ footer a:hover {
     }
 }
 
+/* Estilos para os novos tópicos na seção Sobre */
+.topic-item {
+    margin-bottom: 1.5rem; /* Espaçamento entre os tópicos */
+}
+
+.topic-title {
+    font-size: 1.1rem; /* Tamanho da fonte do título do tópico */
+    font-weight: 600; /* Deixa a fonte em negrito */
+    color: var(--primary-color); /* Usa a cor primária do seu site */
+    margin-bottom: 0.5rem; /* Espaçamento entre o título e o parágrafo */
+    position: relative;
+    padding-left: 15px; /* Espaço para o ícone */
+}
+
+/* Adiciona um pequeno ícone decorativo antes do título */
+.topic-title::before {
+    content: '>'; /* Pode usar '•', '✓' ou outro de sua preferência */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.company-description .topic-item p {
+    margin-bottom: 0; /* Remove a margem extra do parágrafo dentro do tópico */
+    padding-left: 15px; /* Alinha o parágrafo com o título */
+}
