@@ -956,10 +956,10 @@ section h2 {
 }
 
 .projects-asymmetric-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem 0;
 }
 
 .project-card {
@@ -969,20 +969,34 @@ section h2 {
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    box-shadow: 0 4px 15px rgba(0, 75, 173, 0.08);
+    width: 100%;
+    max-width: 100%;
+}
+
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(0, 75, 173, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 75, 173, 0.15);
     border-color: var(--primary-color);
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
+    width: 50%;
+    height: 300px;
     overflow: hidden;
     background-color: #f8f9fa;
+    position: relative;
+    border-radius: 12px 0 0 12px;
+    flex-shrink: 0;
+}
+
+.project-card:nth-child(even) .project-image {
+    border-radius: 0 12px 12px 0;
 }
 
 .project-image img {
@@ -991,64 +1005,83 @@ section h2 {
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
+    filter: brightness(0.95);
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    filter: brightness(1.05);
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid var(--border-color);
+    justify-content: center;
+    width: 50%;
+    background: linear-gradient(135deg, var(--white) 0%, var(--secondary-color) 100%);
+    border-left: 1px solid var(--border-color);
+}
+
+.project-card:nth-child(even) .project-content {
+    border-left: none;
+    border-right: 1px solid var(--border-color);
 }
 
 .project-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 .project-content p {
     color: var(--text-color);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
     opacity: 0.8;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
 }
 
 .tech-tag {
-    background: var(--tech-hover);
-    color: var(--primary-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 500;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 75, 173, 0.2);
 }
 
 .project-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background: rgba(0, 75, 173, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 75, 173, 0.1);
+    align-self: flex-start;
 }
 
 .project-link:hover {
-    color: var(--primary-light);
-    transform: translateX(3px);
+    color: var(--white);
+    background: var(--primary-color);
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 75, 173, 0.3);
 }
 
 /* Seção Contato */
@@ -1287,8 +1320,33 @@ footer a:hover {
         gap: 1rem;
     }
 
-    .projects-asymmetric-grid {
-        grid-template-columns: 1fr;
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        width: 100%;
+        height: 250px;
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .project-card:nth-child(even) .project-image {
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .project-content {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .project-card:nth-child(even) .project-content {
+        border-right: none;
+        border-top: 1px solid var(--border-color);
     }
 
     .cta-buttons {
@@ -1404,4 +1462,71 @@ footer a:hover {
 .company-description .topic-item p {
     margin-bottom: 0; /* Remove a margem extra do parágrafo dentro do tópico */
     padding-left: 15px; /* Alinha o parágrafo com o título */
+}
+
+/* Botão WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+}
+
+/* Responsividade para o botão WhatsApp */
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
 }
