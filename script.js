@@ -495,6 +495,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // 13. CONTROLE DOS BOTÕES "VER MAIS" PARA PROJETOS
+    const loadMoreCompleted = document.getElementById('load-more-completed');
+    const loadMoreDevelopment = document.getElementById('load-more-development');
+    const additionalGrid = document.querySelector('.projects-additional-grid');
+    const developmentAdditionalGrid = document.querySelector('.projects-development-additional-grid');
+
+    if (loadMoreCompleted && additionalGrid) {
+        loadMoreCompleted.addEventListener('click', function() {
+            if (additionalGrid.style.display === 'none') {
+                additionalGrid.style.display = 'grid';
+                this.innerHTML = 'Ver Menos Projetos Concluídos <i class="fas fa-chevron-up"></i>';
+                this.classList.add('expanded');
+                
+                // Scroll suave para os novos projetos
+                setTimeout(() => {
+                    additionalGrid.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }, 300);
+            } else {
+                additionalGrid.style.display = 'none';
+                this.innerHTML = 'Ver Mais Projetos Concluídos <i class="fas fa-chevron-down"></i>';
+                this.classList.remove('expanded');
+            }
+        });
+    }
+
+    if (loadMoreDevelopment && developmentAdditionalGrid) {
+        loadMoreDevelopment.addEventListener('click', function() {
+            if (developmentAdditionalGrid.style.display === 'none') {
+                developmentAdditionalGrid.style.display = 'grid';
+                this.innerHTML = 'Ver Menos Projetos em Desenvolvimento <i class="fas fa-chevron-up"></i>';
+                this.classList.add('expanded');
+                
+                // Scroll suave para os novos projetos
+                setTimeout(() => {
+                    developmentAdditionalGrid.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }, 300);
+            } else {
+                developmentAdditionalGrid.style.display = 'none';
+                this.innerHTML = 'Ver Mais Projetos em Desenvolvimento <i class="fas fa-chevron-down"></i>';
+                this.classList.remove('expanded');
+            }
+        });
+    }
+
     console.log('🚀 Efeitos tecnológicos avançados carregados com sucesso!');
 });
 
