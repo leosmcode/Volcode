@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // 0. DETECÇÃO DE SCROLL PARA BACKGROUND FIXO DA HERO
+    const heroBackground = document.querySelector('.hero-background');
+    const heroSection = document.querySelector('.hero');
+    
+    window.addEventListener('scroll', function() {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        if (window.scrollY > heroBottom - 100) {
+            heroBackground.classList.add('scrolled');
+        } else {
+            heroBackground.classList.remove('scrolled');
+        }
+    });
+
     // 1. INICIALIZAÇÃO DO PARTICLES.JS - BACKGROUND TECNOLÓGICO AVANÇADO
     if (document.getElementById('particles-js')) {
         particlesJS('particles-js', {
@@ -441,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (Math.random() > 0.95) { // 5% de chance a cada intervalo
                 heroTitle.style.textShadow = '2px 0 #004bad, -2px 0 #384653';
                 setTimeout(() => {
-                    heroTitle.style.textShadow = '0 0 20px rgba(0, 75, 173, 0.1)';
+                    heroTitle.style.textShadow = '0 0 20px rgba(30, 58, 138, 0.1)';
                 }, 100);
             }
         }, 2000);
@@ -469,11 +482,11 @@ document.addEventListener('DOMContentLoaded', function() {
     style.textContent = `
         @keyframes pulse-glow {
             0%, 100% { 
-                text-shadow: 0 0 5px rgba(0, 75, 173, 0.3);
+                text-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
                 transform: scale(1);
             }
             50% { 
-                text-shadow: 0 0 15px rgba(0, 75, 173, 0.6);
+                text-shadow: 0 0 15px rgba(30, 58, 138, 0.6);
                 transform: scale(1.02);
             }
         }
@@ -507,14 +520,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 additionalGrid.style.display = 'grid';
                 this.innerHTML = 'Ver Menos Projetos Concluídos <i class="fas fa-chevron-up"></i>';
                 this.classList.add('expanded');
-                
-                // Scroll suave para os novos projetos
-                setTimeout(() => {
-                    additionalGrid.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
-                }, 300);
             } else {
                 additionalGrid.style.display = 'none';
                 this.innerHTML = 'Ver Mais Projetos Concluídos <i class="fas fa-chevron-down"></i>';
@@ -529,14 +534,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 developmentAdditionalGrid.style.display = 'grid';
                 this.innerHTML = 'Ver Menos Projetos em Desenvolvimento <i class="fas fa-chevron-up"></i>';
                 this.classList.add('expanded');
-                
-                // Scroll suave para os novos projetos
-                setTimeout(() => {
-                    developmentAdditionalGrid.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
-                }, 300);
             } else {
                 developmentAdditionalGrid.style.display = 'none';
                 this.innerHTML = 'Ver Mais Projetos em Desenvolvimento <i class="fas fa-chevron-down"></i>';
